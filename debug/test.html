@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<div class="warpper-a" style="margin-top:100px;">模板一</div>
+<!-- 定义列表一容器 -->
+<div id="bnc-sdk-bncdemo-wrapper-a"></div>
+
+<!-- 同步方式加载bncDemo能力 -->
+<!-- init: 是否直接初始化此次获取的组件能力 -->
+<!-- callid: 扩展参数 -->
+<script type="text/javascript" src="http://10.95.99.40:8484/bnc/bnc.js?ability=awardTool"></script> 
+<script src="entry.js"></script>
+
+<!-- 异步方式加载videoPlayer能力 -->
+<!-- 采用异步方式bnc会检测系统中已有能力和插件，自动拼接系统参数
+http://bnc.nuomi.com/bnc/bnc.js?ability=videoPlayer&hasability=bncDemo&hasplugin=$,Zepto,ajax&hasconfig=1&isappend=1&callid=6&_=1481774314531 -->
+<script type="text/javascript">
+
+    {{caller}}
+</script>
+</body>
+</html>
