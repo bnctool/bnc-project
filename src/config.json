@@ -1,0 +1,9 @@
+{
+    "id": "bncDemo",
+    "name": "bncDemo",
+    "dependencies": ["zepto", "ajax"],
+	"initFunction": "init",
+    "html": ["bncDemo.html"],
+    "css": ["bncDemo.css"],
+    "js": ["bncDemo.js"]
+}
