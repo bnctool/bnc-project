@@ -8,7 +8,7 @@
 // bncStatic 作为最后一个参数输出整合后的html+css内容
 // 例如: bncStatic = {html: {'bncDemo.html': '', 'bncDemo1.html': '', 'bncDemo2.html': ''}, css: {'bncDemo.css': '', 'bncDemo1.css': '', 'bncDemo2.css': ''}}
 // 若无html/css, 则输出{}
-BNC.use(['zepto', 'tmpl'], function ($, tmpl, bncStatic) {
+BNC.use(['zepto', 'ajax', 'tmpl'], function ($, ajax, tmpl, bncStatic) {
 
     // 整合后的html存于 bncStatic.html 下
     var bncStaticHtml = bncStatic.html || {};
@@ -17,17 +17,20 @@ BNC.use(['zepto', 'tmpl'], function ($, tmpl, bncStatic) {
     // 【核心能力】
     // 默认初始化
     function bncInit(res) {
-        var abilityList = [
-            'awardTool',
-            'bncDemo',
-            'BNJSLog',
-            'digforgold',
-            'QAtast',
-            'share',
-            'videoPlayer',
-            'wxShare'
-        ];
-        renderList(abilityList);
+        // 兼容跨域请求(BNC将自动处理跨域问题)
+        ajax({
+            url: 'https://bnc.baidu.com/bnc/test',
+            // 环境确认：1-需确认 -- NA下用NA的ajax，WAP下用WAP的ajax（为兼容NA组件一键转WAP下的ajax）
+            envEnsure: 1,
+            data: {},
+            dataType: 'json',
+            success: function (res) {
+                res && renderList(res);
+            },
+            error: function () {
+            }
+        });
+
     }
 
     // 渲染能力列表
