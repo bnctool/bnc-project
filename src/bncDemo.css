@@ -1,7 +1,6 @@
 #bnc-sdk-bncdemo-wrapper-a {
     margin: 0;
     padding: 0;
-    background: url('images/norwegian_rose.png?bncimg=1');
 }
 
 #bnc-sdk-bncdemo-wrapper-a .bnc-sdk-bncdemo-list {
@@ -29,7 +28,7 @@
 }
 
 #bnc-sdk-bncdemo-wrapper-a .bnc-sdk-bncdemo-list a:hover {
-    background: #eee;
+    background: url('images/norwegian_rose.png?bncimg=1');    
 }
 
 #bnc-sdk-bncdemo-wrapper-a .bnc-sdk-bncdemo-list a:hover:before {

@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>{{title}}</title>
 </head>
 <body>
-<div class="warpper-a" style="margin-top:100px;">模板一</div>
+<div class="warpper-a" style="margin-top:50px;">示例：</div>
 <!-- 定义列表一容器 -->
 <div id="bnc-sdk-bncdemo-wrapper-a"></div>
 
-<!-- 同步方式加载bncDemo能力 -->
-<!-- init: 是否直接初始化此次获取的组件能力 -->
-<!-- callid: 扩展参数 -->
+<!-- 加载bnc及能力依赖插件 -->
 <script type="text/javascript" src="http://cp01-rdqa-dev509-lizixu.epc.baidu.com:8085/bnc.js?plugin=zepto,tmpl,ajax"></script> 
+<!-- 打包后的 {{title}} 能力 -->
 <script src="entry.js"></script>
-
-<!-- 异步方式加载videoPlayer能力 -->
-<!-- 采用异步方式bnc会检测系统中已有能力和插件，自动拼接系统参数
-http://bnc.nuomi.com/bnc/bnc.js?ability=videoPlayer&hasability=bncDemo&hasplugin=$,Zepto,ajax&hasconfig=1&isappend=1&callid=6&_=1481774314531 -->
+<!-- 调用能力的调试代码 -->
 <script type="text/javascript">
 
     {{caller}}
+    
 </script>
 </body>
 </html>

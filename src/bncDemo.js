@@ -40,7 +40,7 @@ BNC.use(['zepto', 'tmpl'], function ($, tmpl, bncStatic) {
         var tplHtml = bncStaticHtml['bncDemo.html'];
         console.log(bncStatic)
         // 插入页面
-        $wrapper.html(cssHtml + tplHtml);
+        $wrapper.html(cssHtml + tmpl(tplHtml, {items: items}));
     }
 
     // 【集成到BNC】 -- 需输出的能力API
