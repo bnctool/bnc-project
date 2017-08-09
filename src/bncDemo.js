@@ -8,7 +8,7 @@
 // bncStatic 作为最后一个参数输出整合后的html+css内容
 // 例如: bncStatic = {html: {'bncDemo.html': '', 'bncDemo1.html': '', 'bncDemo2.html': ''}, css: {'bncDemo.css': '', 'bncDemo1.css': '', 'bncDemo2.css': ''}}
 // 若无html/css, 则输出{}
-BNC.use(['zepto', 'tmpl'], function ($, bncStatic) {
+BNC.use(['zepto', 'tmpl'], function ($, tmpl, bncStatic) {
 
     // 整合后的html存于 bncStatic.html 下
     var bncStaticHtml = bncStatic.html || {};
