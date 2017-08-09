@@ -19,13 +19,13 @@ BNC.use(['zepto', 'ajax', 'tmpl'], function ($, ajax, tmpl, bncStatic) {
     function bncInit(res) {
         // 兼容跨域请求(BNC将自动处理跨域问题)
         ajax({
-            url: 'https://bnc.baidu.com/bnc/test',
+            url: 'https://bnc.baidu.com/api/call/getAllAbilityInfo',
             // 环境确认：1-需确认 -- NA下用NA的ajax，WAP下用WAP的ajax（为兼容NA组件一键转WAP下的ajax）
             envEnsure: 1,
             data: {},
             dataType: 'json',
             success: function (res) {
-                res && renderList(res);
+                res && renderList(res.data);
             },
             error: function () {
             }
