@@ -1,6 +1,6 @@
 /**
  * @file bncDemo.js
- * @dependancy zepto, tmpl
+ * @dependancy zepto, ajax, tmpl
  */
 
 // 【BNC依赖】
